@@ -1,0 +1,348 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+/*background-image: url('/image/background.png'); /* Put your image name here */
+  background-size: cover;       /* Cover the whole screen */
+  background-repeat: no-repeat; /* Prevent image tiling */
+  background-position: center;  /* Center the image */
+  height: 100vh;                /* Full viewport height */
+  margin: 0;                    /* Remove default margin */
+  color: white;                 /* Text color for visibility */
+}
+/* ===== Global Styles ===== */
+
+/* Header section */
+.header{
+     width: 100%;
+  height: 100px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white;
+  padding: 15px;
+  justify-content: space-between;
+  text-align: right;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end; /* Align navigation to the right */
+  align-items: right;       /* Center items vertically */
+  margin-bottom: -70px; 
+   /* Space between logo and navigation */
+}
+
+/* Navigation links inside header */
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  margin-bottom: 80px;
+}
+header nav a:hover {
+  color: #00ccff;
+  transform: scale(1.2);
+  text-decoration: underline; /* Underline on hover */
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  margin-left:auto;
+  margin-right: -100px;
+  
+}
+header div {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: left;
+   display: flex;
+  align-items: center;
+}
+header h1 {
+  font-size: 24px; /* Adjust header size */
+  margin-bottom: 10px; /* Space below the header */
+  padding: 10px; /* Space around the header */
+}
+header h2 {
+  font-size: 18px; /* Adjust sub-header size */
+  margin-left: -315px;  /* move right */
+  margin-top: 40px;
+}
+
+.logo {
+  width: 50px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  vertical-align: left; /* Align with text */
+   object-fit: cover;   /* Ensure the image fills the circle nicely */
+  border-radius: 50%;  /* Makes the image round */
+  border: 2px solid #ccc; /* Optional border */
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 60px; /* Space above the icons */
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.2em;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #00ccff;
+  transform: scale(1.2);
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #111;
+}
+/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION ===== */
+.hero-section {
+  height: calc(85vh - 50px); /* Reduced height */
+  width: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.hero-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease;
+}
+
+/* Swapped order: image first */
+.hero-right {
+  order: 1;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.hero-left {
+  order: 2;
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-left h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.hero-left p {
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Buttons with white background */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.9s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.hero-btn i {
+  margin-right: 8px;
+}
+
+.hero-btn:hover {
+  background-color: #eee;
+  transform: scale(1.05);
+}
+
+/* Scroll-down arrow */
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  color: #00ccff;
+  animation: bounce 1.8s infinite;
+  text-decoration: none;
+}
+
+.scroll-down:hover {
+  color: #00aacc;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left, .hero-right {
+    order: unset;
+    width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .scroll-down {
+    font-size: 1.8em;
+  }
+}
+
+/* ===== About Section ===== */
+
+
+/* ===== Footer Base ===== */
+.site-footer {
+  background-color: black;
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  font-size: 0.9em;
+}
+
+/* Container with Flex */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left */
+.footer-left {
+  flex: 1;
+}
+
+/* Center Icons */
+.footer-center {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+}
+
+.footer-center a {
+  color: #fff;
+  font-size: 1.2em;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.footer-center a:hover {
+  color: #00ccff;
+  transform: scale(1.2);
+}
+
+/* Right */
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.back-to-top {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.back-to-top:hover {
+  color: #00ccff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right,
+  .footer-center {
+    flex: unset;
+  }
+}
