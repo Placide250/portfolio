@@ -118,8 +118,8 @@ header h2 {
 .hero-section {
   height: calc(85vh - 50px); /* Reduced height */
   width: 100%;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,7 +170,7 @@ header h2 {
 
 .hero-left p {
   font-size: 1.1em;
-  color: #fff;
+  color: #000;
   margin-bottom: 20px;
   animation: fadeInUp 1s ease forwards;
   animation-delay: 0.3s;
@@ -188,8 +188,8 @@ header h2 {
 .hero-btn {
   display: inline-flex;
   align-items: center;
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 6px;
@@ -202,7 +202,8 @@ header h2 {
 }
 
 .hero-btn:hover {
-  background-color: #eee;
+  background-color: #000;
+  color: #00ccff;
   transform: scale(1.05);
 }
 
@@ -213,13 +214,13 @@ header h2 {
   left: 50%;
   transform: translateX(-50%);
   font-size: 2em;
-  color: #00ccff;
+  color: #000;
   animation: bounce 1.8s infinite;
   text-decoration: none;
 }
 
 .scroll-down:hover {
-  color: #00aacc;
+  color: #00ccff;
 }
 
 /* Animations */
