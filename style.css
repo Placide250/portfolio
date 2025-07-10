@@ -116,6 +116,8 @@ header h2 {
 /* ===== HERO SECTION ===== */
 /* ===== HERO SECTION ===== */
 .hero-section {
+  flex-grow: 1;
+    overflow-y: auto;
   height: calc(85vh - 50px); /* Reduced height */
   width: 100%;
   background: white;
