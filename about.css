@@ -54,7 +54,7 @@ header nav a {
   margin-bottom: 80px;
 }
 header nav a:hover {
-  color: #00ccff;
+  color: #007cff;
   transform: scale(1.2);
   text-decoration: underline; /* Underline on hover */
 }
@@ -224,7 +224,7 @@ header h2 {
 .skills-category h3 {
   font-size: 18px;
   margin-bottom: 5px;
-  color: #1e90ff;
+  color: #007bff;
 }
 
 /* Skill list items */
@@ -274,7 +274,7 @@ header h2 {
   text-decoration: none;
 }
 
-.scroll-down:hover {
+.scroll__down-button:hover {
   color: #007bff; 
 }
 

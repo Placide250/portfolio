@@ -52,7 +52,7 @@ header nav a {
   margin-bottom: 80px;
 }
 header nav a:hover {
-  color: #00ccff;
+  color: #007cff;
   transform: scale(1.2);
   text-decoration: underline; /* Underline on hover */
 }
@@ -103,7 +103,7 @@ header h2 {
 }
 
 .social-icons a:hover {
-  color: #00ccff;
+  color: #007cff;
   transform: scale(1.2);
 }
 .site-header {
@@ -205,7 +205,7 @@ header h2 {
 
 .hero-btn:hover {
   background-color: #000;
-  color: #00ccff;
+  color: #007cff;
   transform: scale(1.05);
 }
 
@@ -222,7 +222,7 @@ header h2 {
 }
 
 .scroll-down:hover {
-  color: #00ccff;
+  color: #007cff;
 }
 
 /* Animations */
@@ -321,7 +321,7 @@ footer {
 }
 
 .footer-center a:hover {
-  color: #00ccff;
+  color: #007cff;
   transform: scale(1.2);
 }
 
@@ -339,7 +339,7 @@ footer {
 }
 
 .back-to-top:hover {
-  color: #00ccff;
+  color: #007cff;
 }
 
 /* Responsive */
