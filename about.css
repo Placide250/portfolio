@@ -1,0 +1,261 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+/*background-image: url('/image/background.png'); /* Put your image name here */
+  background-size: cover;       /* Cover the whole screen */
+  background-repeat: no-repeat; /* Prevent image tiling */
+  background-position: center;  /* Center the image */
+  height: 100vh;                /* Full viewport height */
+  margin: 0;                    /* Remove default margin */
+  color: white;                 /* Text color for visibility */
+  flex-direction: column;
+}
+/* ===== Global Styles ===== */
+
+/* Header section */
+.header{
+     width: 100%;
+  height: 85px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white;
+  padding: 15px;
+  justify-content: space-between;
+  text-align: right;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end; /* Align navigation to the right */
+  align-items: right;       /* Center items vertically */
+  margin-bottom: -70px; 
+   /* Space between logo and navigation */
+}
+
+/* Navigation links inside header */
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  margin-bottom: 80px;
+}
+header nav a:hover {
+  color: #00ccff;
+  transform: scale(1.2);
+  text-decoration: underline; /* Underline on hover */
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  margin-left:auto;
+  margin-right: -100px;
+  
+}
+header div {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: left;
+   display: flex;
+  align-items: center;
+}
+header h1 {
+  font-size: 24px; /* Adjust header size */
+  margin-bottom: 10px; /* Space below the header */
+  padding: 10px; /* Space around the header */
+}
+header h2 {
+  font-size: 18px; /* Adjust sub-header size */
+  margin-left: -315px;  /* move right */
+  margin-top: 40px;
+}
+
+.logo {
+  width: 50px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  vertical-align: left; /* Align with text */
+   object-fit: cover;   /* Ensure the image fills the circle nicely */
+  border-radius: 50%;  /* Makes the image round */
+  border: 2px solid #ccc; /* Optional border */
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 60px; /* Space above the icons */
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.2em;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #00ccff;
+  transform: scale(1.2);
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #111;
+}
+
+/* Main content container */
+
+/* Main content container */
+.about-main-content {
+  padding: 40px 20px;
+  background-color: #fff;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Two-column flex layout */
+.experience-skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Columns */
+.experience-column, .skills-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Section headings (Experience, Education, Skills) */
+.experience-column h2,
+.skills-column h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1e90ff;
+  padding-bottom: 5px;
+  color: #000;
+}
+
+/* Experience and Education cards */
+.job-entry,
+.education-entry {
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 6px solid;
+  border-image: linear-gradient(to bottom, #1e90ff, #4a90e2) 1;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+/* Hover effect for cards */
+.job-entry:hover,
+.education-entry:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Job and education titles */
+.job-entry h3,
+.education-entry h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #007bff;
+}
+
+/* Company and school date info */
+.company-date,
+.school-date {
+  font-size: 14px;
+  color: #000;
+  margin: 8px 0;
+}
+
+/* Focus description */
+.focus {
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* Job duties */
+.job-entry ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.job-entry ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Skills section */
+.skills-category {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+  animation-delay: 0.3s;
+}
+
+/* Skills category titles (Languages, Tools, etc.) */
+.skills-category h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #1e90ff;
+}
+
+/* Skill list items */
+.skills-category ul {
+  padding-left: 20px;
+}
+
+.skills-category ul li {
+  margin-bottom: 5px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* Hide empty last skill box */
+.skills-category:last-child {
+  display: none;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .experience-skills-section {
+    flex-direction: column;
+  }
+
+  .experience-column,
+  .skills-column {
+    width: 100%;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
