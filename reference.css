@@ -200,18 +200,6 @@ h2.section-title::after {
     margin-right: 10px;
     color: #007bff; /* Your accent color for icons */
 }
-
-/* Specific styling for My Contact Info card if needed */
-.contact-card {
-    /* Add specific styles here if you want it to look different from other cards */
-}
-
-/* Specific styling for Reference cards if needed */
-.reference { /* Using your existing 'reference' class for these */
-    /* Add specific styles here if you want it to look different from general cards */
-}
-
-/* Style for the download button within reference cards */
 .btn-download { /* Your existing class name */
     display: inline-block;
     background-color: #007bff; /* Primary button color */
