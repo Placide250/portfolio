@@ -1,0 +1,116 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body id="top">
+  
+ <header class= "header">
+     <div class="branding">
+        <img src="../image/profile.JPG" alt="Logo" class="logo"> <!-- Put your logo image name here -->
+      <h1>NDAYISHIMIYE M. PLACIDE</h1>
+      <h2>Software Engineer</h2>
+    </div>
+  
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="references.html">References</a>
+    </nav>
+    <div class="social-icons">
+      <a href="mailto:ndayishimiyeplacide72@gmail.com" title="Send Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="tel:+14842211533" title="Call Now">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="https://github.com/Placide250" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/ndayishimiye-mizero-placide-8a78a4193/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </header>
+  <section class="hero-section" id="top">
+  <div class="hero-box">
+
+    <!-- Left Content -->
+    <div class="hero-left">
+      <h1><span class="bounce-wave-combo">👋</span>   Hello world,</h1>
+      <h2>I’m NDAYISHIMIYE M. PLACIDE</h2>
+      <p>A software engineer who started this journey with a simple "Hello World" in 2015.  
+Since then, I've been learning, building, and evolving — driven by curiosity and the desire to solve real-world problems through technology.  
+Currently pursuing my Master’s in Software Engineering at Oklahoma Christian University (Class of 2026).
+</p>
+<p>📬 Want to connect?  
+You can email me at ndayishimiyeplacide72@gmail.com Or call me at +1 (484)-221-1533</p>
+
+      <div class="hero-buttons">
+        <a  download class="hero-btn" onclick="downloadFile()">
+          <i class="fas fa-file-pdf"></i> Download Resume
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" class="hero-btn">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="hero-right">
+      <img src="../image/profile.JPG" alt="Placide's Profile" class="hero-image">
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <a href="contacts.html" class="scroll__down-button">
+    <i class="fas fa-angle-down"></i>
+</a>
+    <div class="site-footer__container">
+
+        <div class="site-footer__left">
+            <p>&copy; 2025 NDAYISHIMIYE M. PLACIDE</p>
+        </div>
+
+        <div class="site-footer__center">
+            <a href="mailto:ndayishimiyeplacide72@gmail.com" title="Send Email" class="site-footer__social-link">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+14842211533" title="Call Now" class="site-footer__social-link">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://github.com/Placide250" target="_blank" title="GitHub" class="site-footer__social-link">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ndayishimiye-mizero-placide-8a78a4193/" target="_blank" title="LinkedIn" class="site-footer__social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+
+        <div class="site-footer__right">
+            <a href="index.html" class="site-footer__back-to-top" title="Back to top">↑ Top</a>
+        </div>
+    </div>
+</footer>
+</body>
+
+<script>
+  function downloadFile() {
+    const link = document.createElement('a');
+    link.href = '../files/resume.pdf';
+    link.download = '../files/resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+</script>
+
+</html>

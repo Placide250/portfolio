@@ -54,7 +54,6 @@ header nav a {
 header nav a:hover {
   color: #007cff;
   transform: scale(1.2);
-  text-decoration: underline; /* Underline on hover */
 }
 .navbar{
   display: flex;
@@ -114,6 +113,24 @@ header h2 {
   background-color: #111;
 }
 /* ===== HERO SECTION ===== */
+/* bouncing effect*/
+.bounce-wave-combo {
+  display: inline-block;
+  font-size: 40px;
+  animation: bounce-wave 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes bounce-wave {
+  0%   { transform: rotate(0deg) translateY(0); }
+  10%  { transform: rotate(14deg) translateY(-10px); }
+  20%  { transform: rotate(-8deg) translateY(0); }
+  30%  { transform: rotate(14deg) translateY(-7px); }
+  40%  { transform: rotate(-4deg) translateY(0); }
+  50%  { transform: rotate(10deg) translateY(-4px); }
+  60%  { transform: rotate(0deg) translateY(0); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
 /* ===== HERO SECTION ===== */
 .hero-section {
   flex-grow: 1;
@@ -121,7 +138,7 @@ header h2 {
   height: calc(85vh - 50px); /* Reduced height */
   width: 100%;
   background: white;
-  color: black;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,7 +189,7 @@ header h2 {
 
 .hero-left p {
   font-size: 1.1em;
-  color: #000;
+  color: #333;
   margin-bottom: 20px;
   animation: fadeInUp 1s ease forwards;
   animation-delay: 0.3s;
@@ -194,6 +211,7 @@ header h2 {
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
+  border-style: shadow;
   border-radius: 6px;
   font-weight: bold;
   transition: background-color 0.3s, transform 0.2s;
@@ -204,8 +222,9 @@ header h2 {
 }
 
 .hero-btn:hover {
-  background-color: #000;
-  color: #007cff;
+  box-shadow: #000 0 0 10px;
+  background-color: #fff;
+  color: #000;
   transform: scale(1.05);
 }
 
@@ -269,92 +288,86 @@ header h2 {
 
 /* ===== About Section ===== */
 
-
-/* ===== Footer Base ===== */
-footer {
-  background-color: black;
-  color: #fff;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  margin-bottom: 100px; /* Ensure footer is at the bottom */
+/* Footer styles */
+/* Style for the scroll down button, if you want it distinct */
+.scroll__down-button {
+    /* Add your styles here, e.g., position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); */
+    display: block; /* Example */
+    text-align: bottom; /* Example */
+    margin-bottom: 20px; /* Example spacing from footer */
 }
+
+/* --- Site Footer Styles --- */
 .site-footer {
-  background-color: black;
-  color: #fff;
-  height: 50px;
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  font-size: 0.9em;
+    position: fixed; /* Makes the footer stay in place even when scrolling */
+    bottom: 0; /* Aligns the footer to the bottom of the viewport */
+    left: 0; /* Aligns the footer to the left of the viewport */
+    width: 100%; /* Makes the footer span the full width of the viewport */
+    height: 50px; /* Sets the desired height of the footer */
+    background-color: #000; /* Example background color */
+    color: #fff; /* Example text color */
+    display: flex; /* Enables flexbox for aligning content */
+    align-items: center; /* Vertically centers content within the footer */
+    padding: 0 20px; /* Adds some horizontal padding */
+    box-sizing: border-box; /* Ensures padding is included in the 100% width */
+    z-index: 1000; /* Ensures the footer stays on top of other content */
+    justify-content: space-between; /* Distributes items with space between them */
 }
 
-/* Container with Flex */
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  padding: 0 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+.site-footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensures the container fills the footer's width */
 }
 
-/* Left */
-.footer-left {
-  flex: 1;
+.site-footer__left p {
+    margin: 0; /* Removes default paragraph margin */
+    font-size: 0.9em; /* Adjust as needed */
 }
 
-/* Center Icons */
-.footer-center {
-  display: flex;
-  gap: 20px;
-  flex: 1;
-  justify-content: center;
+.site-footer__center {
+    display: flex;
+    gap: 15px; /* Adds space between social icons */
 }
 
-.footer-center a {
-  color: #fff;
-  font-size: 1.2em;
-  transition: color 0.3s, transform 0.2s;
+.site-footer__social-link {
+    color: #fff; /* Icon color */
+    font-size: 1.2em; /* Icon size */
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.3s ease; /* Smooth hover effect */
 }
 
-.footer-center a:hover {
-  color: #007cff;
-  transform: scale(1.2);
+.site-footer__social-link:hover {
+    color: #007bff; /* Example hover color */
 }
 
-/* Right */
-.footer-right {
-  flex: 1;
-  text-align: right;
+.site-footer__right .site-footer__back-to-top {
+    color: #fff; /* Text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 1em; /* Adjust as needed */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
+    display: flex; /* Ensures the link is displayed as a block */
+    align-items: center; /* Vertically centers the text */
 }
 
-.back-to-top {
-  color: #fff;
+.site-footer__right .site-footer__back-to-top:hover {
+    color: #007bff; /* Example hover color */
+}
+
+/* Scroll-down arrow */
+.scroll__down-button {
+  position: absolute;
+  bottom:60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  color: #000;
+  animation: bounce 1.8s infinite;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
 }
 
-.back-to-top:hover {
-  color: #007cff;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .footer-left,
-  .footer-right,
-  .footer-center {
-    flex: unset;
-  }
+.scroll__down-button:hover {
+  color: #007bff; 
 }
